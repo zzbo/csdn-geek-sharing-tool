@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+}
+h2 {
+	text-align: center;
+}
+.wrap {
+	width: 280px;
+	margin: 15px auto;
+}
+dl {
+	margin: 12px 0;
+	overflow: hidden;
+}
+.item-name, .item-content {
+	float: left;
+}
+.item-name {
+	width: 80px;
+}
+.item-content {
+	width: 200px;
+}
+.item-content input  {
+	width: 180px;
+	border: 1px solid #CCC;
+}
+.item-content textarea {
+	width: 180px;
+	height: 60px;
+	resize: none;
+	border: 1px solid #CCC;
+}
+.publish-btn {
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	border: none;
+	background: #67ae55;
+	color: #FFF;
+	margin: 0 auto;
+	display: block;
+	cursor: pointer;
+}
+.catelist {
+	display: none;
+}

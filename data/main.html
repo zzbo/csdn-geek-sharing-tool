@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="wrap">
+		<h2>分享到CSDN极客头条</h2>
+		<dl>
+			<dt class="item-name">推荐网址：</dt>
+			<dd class="item-content"><input type="text" id="J-share-url" readonly /></dd>
+		</dl>
+		<dl>
+			<dt class="item-name">文章标题：</dt>
+			<dd class="item-content"><input type="text" id="J-share-title" /></dd>
+		</dl>
+		<dl>
+			<dt class="item-name">推荐理由：</dt>
+			<dd class="item-content">
+				<textarea id="J-share-reason"></textarea>
+			</dd>
+		</dl>
+		<dl>
+			<dt class="item-name">所属子社区：</dt>
+			<dd class="item-content">
+				<span id="J-catelist-loading">社区列表加载中...</span>
+				<select id="J-catelist" class="catelist"></select>
+			</dd>
+		</dl>
+		<div>
+			<button id="J-publish" class="publish-btn">发布</button>
+		</div>
+	</div>
+</body>
+</html>
