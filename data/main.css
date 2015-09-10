@@ -49,3 +49,10 @@ dl {
 .catelist {
 	display: none;
 }
+.tip {
+	background: #ffffe9;
+	border: 1px solid #ff4400;
+	padding: 10px;
+	display: none;
+	margin-top: 14px;
+}

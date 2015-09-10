@@ -40,16 +40,24 @@ function handleClick (state) {
   //监听发布
   p.port.on('publish', function (data) {
     console.log('>>> publish');
-    console.log(data);
+    console.log('postData: ', data);
     var publishUrl = 'http://geek.csdn.net/service/news/add_edit';
+    
     Post(publishUrl, data, function (data) {
       console.log(data);
+      if (data.status === 1) {
+        p.port.emit('publishSuccess', data);
+      }
+      else {
+        p.port.emit('error', data);
+      }
     });
   });
 
   p.port.emit('setFormData', {
     url: tabs.activeTab.url,
-    title: tabs.activeTab.title
+    title: tabs.activeTab.title,
+    username : GetCookie('UN')
   });
 
   getCateList(p);
@@ -61,6 +69,9 @@ function getCateList (p) {
   Get(cateListUrl, null, function (data) {
     if (data.status === 1) {
       p.port.emit('cateList', data.data);
+    }
+    else {
+      p.port.emit('error', data);
     }
   });
 }
