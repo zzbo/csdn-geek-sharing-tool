@@ -9,8 +9,11 @@ h2 {
 	text-align: center;
 }
 .wrap {
-	width: 280px;
+	width: 285px;
+	height: 370px;
 	margin: 15px auto;
+	position: relative;
+	padding-left: 15px;
 }
 dl {
 	margin: 12px 0;
@@ -55,4 +58,16 @@ dl {
 	padding: 10px;
 	display: none;
 	margin-top: 14px;
+}
+.input-style {
+	padding: 2px;
+}
+.bottom {
+	position: absolute;
+	bottom: 0;
+	border-top: 1px solid #ccc;
+	padding-top: 5px;
+}
+.bottom a {
+	margin: 0 5px;
 }

@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
 <head>
-	<title></title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="main.css">
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="wrap">
-		<h2>分享到CSDN极客头条</h2>
-		<dl>
-			<dt class="item-name">推荐网址：</dt>
-			<dd class="item-content"><input type="text" id="J-share-url" readonly /></dd>
-		</dl>
-		<dl>
-			<dt class="item-name">文章标题：</dt>
-			<dd class="item-content"><input type="text" id="J-share-title" /></dd>
-		</dl>
-		<dl>
-			<dt class="item-name">推荐理由：</dt>
-			<dd class="item-content">
-				<textarea id="J-share-reason"></textarea>
-			</dd>
-		</dl>
-		<dl>
-			<dt class="item-name">所属子社区：</dt>
-			<dd class="item-content">
-				<span id="J-catelist-loading">社区列表加载中...</span>
-				<select id="J-catelist" class="catelist"></select>
-			</dd>
-		</dl>
-		<div>
-			<input type="hidden" id="J-username" />
-			<button id="J-publish" class="publish-btn">发布</button>
-		</div>
-		<div class="tip" id="J-tip"></div>
-	</div>
+    <div class="wrap">
+        <h2>分享到CSDN极客头条</h2>
+        <dl>
+            <dt class="item-name">推荐网址：</dt>
+            <dd class="item-content"><input type="text" id="J-share-url" class="input-style" readonly /></dd>
+        </dl>
+        <dl>
+            <dt class="item-name">文章标题：</dt>
+            <dd class="item-content"><input type="text" id="J-share-title" class="input-style" /></dd>
+        </dl>
+        <dl>
+            <dt class="item-name">推荐理由：</dt>
+            <dd class="item-content">
+                <textarea id="J-share-reason" class="input-style"></textarea>
+            </dd>
+        </dl>
+        <dl>
+            <dt class="item-name">所属子社区：</dt>
+            <dd class="item-content">
+                <span id="J-catelist-loading">社区列表加载中...</span>
+                <select id="J-catelist" class="catelist"></select>
+            </dd>
+        </dl>
+        <div>
+            <input type="hidden" id="J-username" />
+            <button id="J-publish" class="publish-btn">发布</button>
+        </div>
+        <div class="tip" id="J-tip"></div>
+        <div class="bottom">
+            <a href="http://geek.csdn.net/hot" target="_blank">极客头条最热内容</a>
+            <a href="http://geek.csdn.net/new" target="_blank">极客头条最新内容</a>
+            <a href="http://www.csdn.net/" target="_blank">CSDN官网</a>
+        </div>
+    </div>
 </body>
 </html>
