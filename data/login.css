@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+}
+h2 {
+    text-align: center;
+}
+.wrap {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    padding-left: 15px;
+    overflow: hidden;
+}
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+.login-part h3 {
+    margin: 0;
+    margin-bottom: 23px;
+    font-size: 1.25em;
+    color: #747474;
+    padding: 32px 30px 0 30px;
+}
+.user-info {
+    padding: 0 20px;
+}
+.user-pass form {
+    margin: 0;
+    padding: 0;
+    padding-right: 8px;
+}
+.extends-input, .user-name, .pass-word {
+    display: block;
+    width: 100%; 
+    padding: 8px 0;
+    border: 2px solid #e1e1e1;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-indent: 43px;
+    outline: 0;
+    font-size: 1.25em;
+}
+.user-name {
+    background: url("./login/login-locked-icon.png") no-repeat 15px center;
+}
+.pass-word {
+    background: url("./login/login-key-icon.png") no-repeat 15px center;
+    margin-bottom: 0;
+}
+.error-mess {
+    background: #fff0f0;
+    border: 1px solid #ffd2d2;
+    height: 26px;
+    line-height: 26px;
+    margin-top: 10px;
+    color: #b74d46;
+    width: 100%;
+}
+.error-mess .error-icon {
+    display: inline-block;
+    background: url("./login/login-logic-icons.png") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: -4px 5px 0 5px;
+}
+.forget-password {
+    margin-top: 10px;
+    color: #999;
+    font-size: 1em;
+}
+.logging {
+    background: #dc3c00;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+    clear: both;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+.logging:hover {
+    background: #b43200;
+    color: #fff;
+    text-decoration: none;
+}
+.line {
+    background: #eee;
+    height: 1px;
+    margin-top: 40px;
+}
+.third-part {
+    padding: 20px 52px 35px 30px;
+}
+.third-part span {
+    display: block;
+    font-size: 1.083em;
+    color: #666;
+    margin-bottom: 11px;
+}
+.extends-third-part-icon, 
+.third-part .sina, 
+.third-part .linkin, 
+.third-part .baidu, 
+.third-part .qq, 
+.third-part .google, 
+.third-part .github {
+    display: inline-block;
+    background-image: url("./login/login-third-party.png");
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 32px;
+    height: 32px;
+}
+.third-part {
+  padding: 20px 52px 35px 30px;
+}
+.third-part span {
+  display: block;
+  font-size: 1.083em;
+  color: #666;
+  margin-bottom: 11px;
+}
+.third-part .sina {
+  background-position: 0 0;
+}
+.third-part .linkin {
+  background-position: -37px 0;
+}
+.third-part .baidu {
+  background-position: -74px 0;
+}
+.third-part .qq {
+  background-position: -112px 0;
+}
+.third-part .google {
+  background-position: -149px 0;
+}
+.third-part .github {
+  background-position: -186px 0;
+}
+.third-part .register-now {
+  margin-top: 20px;
+}
+.third-part .register-now span {
+  display: inline-block;
+}
+.third-part .register-now .register {
+  text-align: right;
+}
+.third-part .register-now .register a {
+  margin-left: 15px;
+}
+.forget-password .forget {
+    text-align: right;
+}
+.forget-password a {
+    color: #999;
+    text-decoration: none;
+}
+.close-btn {
+    width: 12px;
+    height: 12px;
+    background: url(./close-btn.png) no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: 1px solid #FFFFFF;
+}
+.close-btn:hover {
+    border: 1px solid #cccccc;
+}
+
+

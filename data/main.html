@@ -13,20 +13,32 @@
             <dd class="item-content"><input type="text" id="J-share-url" class="input-style" readonly /></dd>
         </dl>
         <dl>
-            <dt class="item-name">文章标题：</dt>
-            <dd class="item-content"><input type="text" id="J-share-title" class="input-style" /></dd>
+            <dt class="item-name">
+                文章标题：
+                <div id="J_title_error" class="error-mess">
+                    <span class="error-icon"></span><span id="error-message">请输入标题！</span>
+                </div>
+            </dt>
+            <dd class="item-content"><input type="text" id="J-share-title" class="input-style" placeholder="请输入推荐标题(必填)" /></dd>
         </dl>
         <dl>
             <dt class="item-name">推荐理由：</dt>
             <dd class="item-content">
-                <textarea id="J-share-reason" class="input-style"></textarea>
+                <textarea id="J-share-reason" class="input-style" placeholder="请输入推荐理由(选填)"></textarea>
             </dd>
         </dl>
         <dl>
-            <dt class="item-name">所属子社区：</dt>
-            <dd class="item-content">
+            <dt class="item-name">
+                所属子社区：
+                <div id="J_catelist_error" class="error-mess">
+                    <span class="error-icon"></span><span id="error-message">请输选择子社区！</span>
+                </div>
+            </dt>
+            <dd class="item-content catelist-wrap">
                 <span id="J-catelist-loading">社区列表加载中...</span>
-                <select id="J-catelist" class="catelist"></select>
+                <select id="J-catelist" class="catelist">
+                    <option value="-1">请选择子社区(必选)</option>
+                </select>
             </dd>
         </dl>
         <div>
@@ -35,10 +47,11 @@
         </div>
         <div class="tip" id="J-tip"></div>
         <div class="bottom">
-            <a href="http://geek.csdn.net/hot" target="_blank">极客头条最热内容</a>
-            <a href="http://geek.csdn.net/new" target="_blank">极客头条最新内容</a>
-            <a href="http://www.csdn.net/" target="_blank">CSDN官网</a>
+            <a href="http://geek.csdn.net/hot">极客头条最热内容</a>
+            <a href="http://geek.csdn.net/new">极客头条最新内容</a>
+            <a href="http://www.csdn.net/">CSDN官网</a>
         </div>
     </div>
+    <div id="J-close-btn" class="close-btn"></div>
 </body>
 </html>

@@ -6,6 +6,9 @@ $(function () {
   var jqUserName = $('#J-username');
   var jqPublish = $('#J-publish');
   var jqTip = $('#J-tip');
+  var jqTitleError = $('#J_title_error');
+  var jqCateListError = $('#J_catelist_error');
+  var jqCloseBtn = $('#J-close-btn');
 
   //插件通信
   self.port.on('setFormData', function (data) {
@@ -33,19 +36,50 @@ $(function () {
     jqTip.html(data.error).show();
     setTimeout(function () {
       jqTip.fadeOut();
+      self.port.emit('closeMainPanel', 'closeMainPanel');
     }, 3000);
   });
 
   jqPublish.on('click', function () {
-    var postData = {
-      title : jqShareTitle.val(),
-      forum_id : jqCateList.val(),
-      url : jqShareUrl.val(),
-      description : jqReason.val(),
-      username : jqUserName.val()
-    }
+    var title = jqShareTitle.val();
+    var forum_id = jqCateList.val();
+    var postData;
+    jqTitleError.hide();
+    jqCateListError.hide();
 
-    self.port.emit('publish', postData);
+    if (!title) {
+      jqTitleError.css('display', 'inline-block');
+    }
+    else if (forum_id == -1) {
+      jqCateListError.css('display', 'inline-block');
+    }
+    else {
+      postData = {
+        title : jqShareTitle.val(),
+        forum_id : jqCateList.val(),
+        url : jqShareUrl.val(),
+        description : jqReason.val(),
+        username : jqUserName.val()
+      }
+
+      self.port.emit('publish', postData);
+    }
+  });
+
+  //关闭按钮事件绑定
+  jqCloseBtn.on('click', function () {
+    self.port.emit('closeMainPanel', 'closeMainPanel');
+  });
+
+  $('a').on('click', function (e) {
+    var link = $(this).attr('href');
+      link = link.indexOf('/') === 0 ? (passportLink + link) : link;
+
+      self.port.emit('openLink', {
+        url : link
+      });
+
+    e.preventDefault();
   });
 
   //生成社区列表
