@@ -90,7 +90,6 @@ $(function () {
       tmpl.push(n.name);
       tmpl.push('</option>');
     });
-    $('#J-catelist-loading').hide();
     jqCateList.append(tmpl.join('')).show();
   }
 });
