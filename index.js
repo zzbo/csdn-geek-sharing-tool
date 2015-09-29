@@ -126,6 +126,7 @@ function mainPanel () {
       console.log(data);
       if (data.status === 1) {
         mainP.port.emit('publishSuccess', data);
+        mainP.resize(330, 180);
       }
       else {
         mainP.port.emit('error', data);

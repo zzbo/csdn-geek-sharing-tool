@@ -118,9 +118,9 @@ dl {
     padding-top: 10px;
 }
 .bottom a {
-    margin: 0 5px;
+    margin: 0 7px;
     color: #337ab7;
-    font-size: 14px;
+    font-size: 13px;
 }
 .error-mess {
     color: #b74d46;
@@ -149,4 +149,25 @@ dl {
 }
 .close-btn:hover {
     border: 1px solid #cccccc;
+}
+.success-tip {
+    width: 280px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    clear: both;
+    display: none;
+}
+.success-tip-icon {
+    width: 18px;
+    height: 18px;
+    background: url(login-logic-icons.png) no-repeat -73px 0;
+    float: left;
+}
+.success-tip-text {
+    height: 18px;
+    line-height: 18px;
+    padding-left: 10px;
+    float: left;
 }

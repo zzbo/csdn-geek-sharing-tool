@@ -1,4 +1,6 @@
 $(function () {
+  var jqWrap = $('.wrap');
+  var jqMainTitle = $('#J-share-main-title');
   var jqShareUrl = $('#J-share-url');
   var jqShareTitle = $('#J-share-title');
   var jqCateList = $('#J-catelist');
@@ -9,6 +11,7 @@ $(function () {
   var jqTitleError = $('#J_title_error');
   var jqCateListError = $('#J_catelist_error');
   var jqCloseBtn = $('#J-close-btn');
+  var jqPubSuccess = $('#J-pub-success');
 
   //插件通信
   self.port.on('setFormData', function (data) {
@@ -25,10 +28,11 @@ $(function () {
 
   //发布分享成功
   self.port.on('publishSuccess', function (data) {
-    jqTip.html('已成功分享该文章!').show();
+    jqPubSuccess.show().nextAll().remove();
+    jqWrap.css('height', 'auto');
     setTimeout(function () {
-      jqTip.fadeOut();
-    }, 3000);
+      self.port.emit('closeMainPanel', 'closeMainPanel');
+    }, 2000);
   });
 
   //显示错误提示
